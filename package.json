@@ -1,0 +1,18 @@
+{
+  "name": "actionbound-storage-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "end-of-stream": "^1.4.4"
+  }
+}
