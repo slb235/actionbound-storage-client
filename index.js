@@ -19,8 +19,12 @@ class ActionboundStorageClient {
     this.client = axios.create({
       baseURL: this.url,
       timeout: 24 * 3600 * 100,
-      headers: { 'x-api-key': options.key }
+      headers: { 'x-api-key': this.key }
     })
+  }
+
+  async head(file) {
+    return (await this.client.head(file)).header
   }
 
   async put (file, src) {
