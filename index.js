@@ -24,7 +24,7 @@ class ActionboundStorageClient {
   }
 
   async head(file) {
-    return (await this.client.head(file)).header
+    return (await this.client.head(file)).headers
   }
 
   async put (file, src) {
