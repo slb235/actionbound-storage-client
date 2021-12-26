@@ -13,13 +13,10 @@ const streamEnd = (stream) => new Promise((resolve, reject) => {
 
 class ActionboundStorageClient {
   constructor (options) {
-    this.url = options.url
-    this.key = options.key
-
     this.client = axios.create({
-      baseURL: this.url,
+      baseURL: options.url,
       timeout: 24 * 3600 * 100,
-      headers: { 'x-api-key': this.key }
+      ...(options.key && { headers: { 'x-api-key': options.key } })
     })
   }
 
