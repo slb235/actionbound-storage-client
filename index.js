@@ -16,6 +16,8 @@ class ActionboundStorageClient {
     this.client = axios.create({
       baseURL: options.url,
       timeout: 24 * 3600 * 100,
+      maxContentLength: Infinity,
+      maxBodyLength: Infinity,
       ...(options.key && { headers: { 'x-api-key': options.key } })
     })
   }
